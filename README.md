@@ -2,7 +2,7 @@
 
 This project provides a non-invasive system to predict a person’s ABO/Rh blood group from their fingerprint image using deep learning. The solution combines advanced CNN modeling, non-invasive data acquisition, and a practical Flask-based GUI for end-users, offering speed and usability for scenarios where rapid pre-screening is required.
 
--> Project Overview & Methodology
+## -> Project Overview & Methodology
 
 ## Abstract
 
@@ -30,7 +30,7 @@ Feature Extraction: The system uses automated, CNN-based convolutional layers to
 
 Input (Fingerprint Image via GUI) $\rightarrow$ Preprocessing (Resize $\rightarrow$ Grayscale $\rightarrow$ Normalize) $\rightarrow$ Modified ResNet-18 CNN $\rightarrow$ Prediction Output (Predicted Group & Confidence)
 
--> Running the Application Locally (Flask UI)
+## -> Running the Application Locally (Flask UI)
 
 To run the web interface locally, you must have Python and Git installed.
 
@@ -72,7 +72,7 @@ flask run
 
 The application will launch on your local machine, typically accessible at: http://127.0.0.1:5000/
 
--> Performance and Evaluation
+## -> Performance and Evaluation
 
 Accuracy: The model achieves approximately 90% accuracy on the test dataset.
 
