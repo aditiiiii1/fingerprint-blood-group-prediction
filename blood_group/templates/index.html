@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Group Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Predict Blood Group from Fingerprint</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label>Upload Image:</label>
+            <input type="file" name="image" class="input-field"><br>
+        </div>
+        <div class="form-group">
+            <label>Or Supply External Image URL:</label>
+            <input type="text" name="external_url" class="input-field" placeholder="http://..."><br>
+        </div>
+        <button type="submit" class="predict-btn">Predict</button>
+    </form>
+    {% if predicted %}
+        <div class="result-success">
+            <h3>Predicted Group: {{ predicted }}</h3>
+            
+            <p>Confidence: {{ confidence }}</p>
+            <p>Compatible Recipient Groups:{% if predicted_group == 'O-' %} All groups
+                {% elif predicted_group == 'O+' %}
+                O+, A+, B+, AB+
+                {% elif predicted_group == 'A-' %}
+                A-, A+, AB-, AB+
+                {% elif predicted_group == 'A+' %}
+                A+, AB+
+                {% elif predicted_group == 'B-' %}
+                B-, B+, AB-, AB+
+                {% elif predicted_group == 'B+' %}
+                B+, AB+
+                {% elif predicted_group == 'AB-' %}
+                AB-, AB+
+                {% elif predicted_group == 'AB+' %}
+                AB+
+                {% endif %}
+            </p>
+            
+        </div>
+    {% endif %}
+    {% if error %}
+        <p class="result-error">{{ error }}</p>
+    {% endif %}
+</div>
+</body>
+</html>

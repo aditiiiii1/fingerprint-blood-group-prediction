@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(120deg, #e0e7ff 0%, #fafcff 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 420px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(90,125,167,0.12);
+    padding: 36px 32px 24px 32px;
+}
+
+h2 {
+    color: #217dbb;
+    margin-bottom: 34px;
+    font-size: 1.7rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+label {
+    font-size: 1rem;
+    color: #194d72;
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+.input-field {
+    width: 100%;
+    padding: 9px 13px;
+    border: 1px solid #b6c3cd;
+    border-radius: 7px;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    background: #f7fafc;
+    box-sizing: border-box;
+}
+input[type="file"] {
+    padding: 3px;
+    background: #f7fafc;
+}
+
+.predict-btn {
+    background: linear-gradient(120deg, #217dbb 80%, #17699c 100%);
+    color: white;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 24px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .2s, box-shadow .2s;
+    margin-top: 12px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(160,210,250,0.07);
+}
+.predict-btn:hover {
+    background: linear-gradient(120deg, #17699c 80%, #217dbb 100%);
+}
+
+.result-success {
+    background: #eafaf4;
+    color: #188856;
+    border-radius: 7px;
+    padding: 10px 19px;
+    margin-top: 30px;
+    text-align: center;
+}
+.result-error {
+    color: #cb2323;
+    background: #feeaea;
+    border-radius: 7px;
+    padding: 10px 17px;
+    margin-top: 30px;
+    text-align: center;
+    font-weight: bold;
+}
