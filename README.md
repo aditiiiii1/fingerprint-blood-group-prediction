@@ -1,14 +1,14 @@
-#Fingerprint Blood Group Prediction (ResNet-18)
+# Fingerprint Blood Group Prediction (ResNet-18)
 
 This project provides a non-invasive system to predict a person’s ABO/Rh blood group from their fingerprint image using deep learning. The solution combines advanced CNN modeling, non-invasive data acquisition, and a practical Flask-based GUI for end-users, offering speed and usability for scenarios where rapid pre-screening is required.
 
 -> Project Overview & Methodology
 
-##Abstract
+## Abstract
 
 The system uses a Convolutional Neural Network (CNN), based on a modified ResNet-18 architecture, trained on fingerprint datasets to classify each image into one of the common blood group classes (A+, A-, AB+, AB-, B+, B-, O+, O-). A user-friendly GUI enables real-time blood group prediction by uploading a fingerprint image. The system consistently achieves around 90% classification accuracy in testing, indicating its potential for biometric pre-screening in healthcare and related domains.
 
-##Objectives
+## Objectives
 
 Develop a pipeline that accepts fingerprint images and predicts the corresponding blood group.
 
@@ -18,7 +18,7 @@ Package the model within a Python GUI for interactive, real-time, end-user deplo
 
 Provide detailed evaluation metrics (classification report and confusion matrix) to ensure model accountability.
 
-##Model Selection and Dataflow
+## Model Selection and Dataflow
 
 Choice of Model: A ResNet-18 CNN, pretrained on ImageNet, was chosen due to its proven ability to extract hierarchical features from images, even with modest dataset sizes.
 
@@ -26,7 +26,8 @@ Modification: The final fully connected layer was replaced to match the number o
 
 Feature Extraction: The system uses automated, CNN-based convolutional layers to extract unique fingerprint features (ridges/minutiae) that are implicitly correlated to blood group during supervised training.
 
-##Dataflow Diagram:
+## Dataflow Diagram:
+
 Input (Fingerprint Image via GUI) $\rightarrow$ Preprocessing (Resize $\rightarrow$ Grayscale $\rightarrow$ Normalize) $\rightarrow$ Modified ResNet-18 CNN $\rightarrow$ Prediction Output (Predicted Group & Confidence)
 
 -> Running the Application Locally (Flask UI)
@@ -36,7 +37,6 @@ To run the web interface locally, you must have Python and Git installed.
 1. Clone the Repository
 
 Since you already have the files locally, you can skip this step, but for anyone else:
-
 git clone [https://github.com/aditiiiii1/fingerprint-blood-group-prediction.git](https://github.com/aditiiiii1/fingerprint-blood-group-prediction.git)
 cd fingerprint-blood-group-prediction
 
@@ -45,31 +45,27 @@ cd fingerprint-blood-group-prediction
 
 Create and activate a virtual environment to manage dependencies.
 
-### Create the environment
+i. Create the environment
 python3 -m venv env_flask
 
-### Activate the environment
-
+ii. Activate the environment
 ### On macOS/Linux:
 source env_flask/bin/activate
-#### On Windows (Command Prompt/PowerShell):
+### On Windows (Command Prompt/PowerShell):
 .\env_flask\Scripts\activate
 
 
 3. Install Dependencies
 
 Install all required libraries (PyTorch, Flask, etc.) using pip.
-
 pip install Flask Pillow torch torchvision requests scikit-learn matplotlib numpy
 
 
 4. Run the Flask Server
 
 The application runs using the app.py file located inside the blood_group folder.
-
 ### Set the Flask application file
 export FLASK_APP=blood_group/app.py
-
 ### Start the server
 flask run
 
