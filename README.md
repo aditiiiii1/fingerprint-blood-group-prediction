@@ -1,4 +1,4 @@
-# Fingerprint Blood Group Prediction (ResNet-18)
+# Blood Group Prediction using Fingerprint images (ResNet-18)
 
 This project provides a non-invasive system to predict a person’s ABO/Rh blood group from their fingerprint image using deep learning. The solution combines advanced CNN modeling, non-invasive data acquisition, and a practical Flask-based GUI for end-users, offering speed and usability for scenarios where rapid pre-screening is required.
 
